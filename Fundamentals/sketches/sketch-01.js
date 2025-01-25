@@ -12,7 +12,7 @@ const sketch = () => {
   return ({ context, width, height }) => {
     context.fillStyle = 'white';
     context.fillRect(0, 0, width, height);
-    context.lineWidth = width * 0.01;
+    context.lineWidth = width * 0.015;
 
 
     // Declare variables
