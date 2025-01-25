@@ -12,7 +12,7 @@ const sketch = () => {
   return ({ context, width, height }) => {
     context.fillStyle = 'white';
     context.fillRect(0, 0, width, height);
-    context.lineWidth = width * 0.015;
+    context.lineWidth = width * 0.015; // set line thickness for rectangles drawn
 
 
     // Declare variables
