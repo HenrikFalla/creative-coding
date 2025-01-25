@@ -9,3 +9,5 @@ navigate to the desired directory, then use command canvas-sketch followed by th
 Example: canvas-sketch sketch-01.js --new
 
 For more info check the canvas sketch read-me on github.
+
+Documentation on settings: https://github.com/mattdesl/canvas-sketch/blob/master/docs/api.md#settings
