@@ -11,20 +11,52 @@
         const canvas = document.querySelector('canvas');
         const context = canvas.getContext('2d');
 
-        context.fillStyle = 'blue';
-        // context.fillRect(100, 100, 400, 400);
+        // context.fillStyle = 'blue';
+        // // context.fillRect(100, 100, 400, 400);
 
-        context.beginPath();
-        context.lineWidth = 10;
-        context.rect(100, 100, 400, 400);
-        context.strokeStyle = 'red';
-        context.stroke();
+        // context.beginPath();
+        // context.lineWidth = 10;
+        // context.rect(100, 100, 400, 400);
+        // context.strokeStyle = 'red';
+        // context.stroke();
 
-        context.beginPath();
-        context.lineWidth = 30;
-        context.arc(300, 300, 100, 0, Math.PI * 2, false);
-        context.strokeStyle = 'green';
-        context.stroke();
+        // context.beginPath();
+        // context.lineWidth = 30;
+        // context.arc(300, 300, 100, 0, Math.PI * 2, false);
+        // context.strokeStyle = 'green';
+        // context.stroke();
+
+        // Declare variables
+        const width = 60;
+        const height = 60;
+        const gap = 20;
+        let x, y;
+
+        // Functions to draw shapes
+        function bigSqare(i, j, width, height, x, y) {
+            context.beginPath();
+            context.rect(x, y, width, height);
+            context.stroke();
+        }
+        function smallSquare(i, j, width, height, x, y) {
+            context.beginPath();
+            context.rect(x + 8, y + 8, width - 16, height - 16);
+            context.stroke();
+        }
+
+        // Loop to call functions
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                x = 100 + (width + gap) * i;
+                y = 100 + (height + gap) * j;
+                
+                bigSqare(i, j, width, height, x, y);
+                if (Math.floor(Math.random() * 10) % 2 == 0) {
+                    smallSquare(i, j, width, height, x, y);
+                }          
+            }
+        } 
+        
         
         </script>
 </body>
